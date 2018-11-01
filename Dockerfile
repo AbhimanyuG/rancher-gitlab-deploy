@@ -1,4 +1,5 @@
 FROM python:2.7-alpine
+RUN apk update && apk add curl
 ADD . /rancher-gitlab-deploy
 WORKDIR /rancher-gitlab-deploy
 RUN python /rancher-gitlab-deploy/setup.py install
